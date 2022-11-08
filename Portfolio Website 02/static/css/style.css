@@ -1,0 +1,99 @@
+.banner-upper {
+    display: flex;
+}
+@media screen and (max-width:1200px) {
+    .banner-upper{
+        flex-direction: column;
+    }
+}
+.banner-left {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inp-1 {
+    border-radius: 30px;
+}
+
+#button-addon2 {
+    border-radius: 30px;
+}
+
+.about-item {
+    background-image: url("/static/media/about-bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 140px 0px 120px 0px;
+}
+
+.card-view {
+    display: flex;
+}
+
+.about-card {
+    color: white;
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* height: 5.1rem; */
+}
+
+.about-left-img {
+    margin-right: 7rem;
+}
+
+.ser-icon {
+    height: 37%;
+    width: 20%;
+    float: left;
+    margin-right: 7%;
+}
+
+.title-subtitle {
+    width: 73%;
+    float: left;
+}
+
+.abouts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.port-item {
+    width: 20%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    margin-top: -100px;
+    position: absolute;
+    width: 37%;
+}
+
+.bg-img {
+    background-image: url("/static/media/contact-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 100px 0px;
+    background-position: center center;
+}
+@media screen and (max-width:800px) {
+    .about-card{
+        height: 12rem;
+        border-radius: 1rem;
+        padding-top:1rem ;
+        padding-left: 1rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    .about-left-img{
+        margin: 0 auto;
+    }
+}

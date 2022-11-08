@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Items</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'product_info.css' %}" />
+  </head>
+  <style>
+    header {
+      color: white;
+      width: 100vw;
+      height: 6.5vh;
+      display: flex;
+      background-color: rgb(9, 11, 46);
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    header img {
+      height: 44%;
+      margin: 0 0.3rem 0 0;
+      border: none;
+      transform: rotateY(180deg);
+    }
+
+    body {
+      background-color: rgb(8, 8, 38);
+      height: 100vh;
+      width: 100vw;
+      color: white;
+      margin: 0 auto 0 auto;
+    }
+  </style>
+
+  <body>
+    <label id="idx" style="display: none" for="">{{idx}}</label>
+    <header onclick="go_back()">
+      <img src="/static/angle-right-free-icon-font.png" alt="" />
+      <h1 id='header' onclick="change_page()">Produc Details Box</h1>
+    </header>
+    {% for data in datas %}
+    <label style="display: none;" id="title" for="">{{data.title}}</label>
+    <div class="main-box">
+      <div class="tracking-box boxes">
+        <h3 class="">How much you will earn?</h3>
+        <label for="rupees" class="rupees">₹{{data.earn_money}}</label>
+        <label for="when" class="when"
+          >Earn Rs.{{data.earn_money}} {{data.when_get_money}}</label
+        >
+        <div class="track-box">
+          <div class="m m1">
+            <div class="traking-box dis-flex-row">
+              <div class="labels">
+                <label for="" class="traking">Tracking Time:</label>
+              </div>
+              <div class="days-count">
+                <label for="" class="days">15 Days</label>
+              </div>
+            </div>
+          </div>
+          <div class="m2 m">
+            <div class="confirm-box dis-flex-row">
+              <div class="labels">
+                <label for="" class="confirm">Confirm Time:</label>
+              </div>
+              <div class="days-count">
+                <label for="" class="days">7 Days</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <label for="" class="title">Products Earnings:</label>
+      <div class="boxes earning-box">
+        <div class="box1 box">
+          <div class="items">
+            <label class="earn-title" for="">Total leads count:</label>
+          </div>
+          <div class="items-amount">
+            <label for="" class="earning">0</label>
+          </div>
+        </div>
+        <div class="box1 box">
+          <div class="items">
+            <label class="earn-title" for="">Total leads earnings:</label>
+          </div>
+          <div class="items-amount">
+            <label for="" class="earning">₹0</label>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="box3-label">
+            <label for="" class="total-earnings-label">Total Earnings:</label>
+          </div>
+          <div class="box3-label box3-rupees">
+            <label for="" class="total-rupees">₹0</label>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <label for="" class="title">Description:</label>
+        <div class="desc-box boxes">
+          <label for="">{{data.descriptions}}</label>
+        </div>
+      </div>
+      <div class="specifications">
+        <label for="" class="title">Specifications:</label>
+        <div class="spec-box boxes">
+          <div class="spec-items" id="spec1">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl1" for="">{{data.speci1}}</label>
+          </div>
+          <div class="spec-items" id="spec2">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl2" for="">{{data.speci2}}</label>
+          </div>
+          <div class="spec-items" id="spec3">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl3" for="">{{data.speci3}}</label>
+          </div>
+          <div class="spec-items" id="spec4">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl4" for="">{{data.speci4}}</label>
+          </div>
+          <div class="spec-items" id="spec5">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl5" for="">{{data.speci5}}</label>
+          </div>
+          <div class="spec-items" id="spec6">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl6" for="">{{data.speci6}}</label>
+          </div>
+          <div class="spec-items" id="spec7">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl7" for="">{{data.speci7}}</label>
+          </div>
+          <div class="spec-items" id="spec8">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl8" for="">{{data.speci8}}</label>
+          </div>
+          <div class="spec-items" id="spec9">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl9" for="">{{data.speci9}}</label>
+          </div>
+          <div class="spec-items" id="spec10">
+            <img src="/static/decree.png" alt="" />
+            <label id="specl10" for="">{{data.speci10}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="btns">
+        <div class="btn-box">
+          <button class="apply btn">
+            <img src="/static/check-list.png" alt="" />
+            <a  href="{{data.link}}">Apply Here</a>
+          </button>
+        </div>
+        {% comment %}
+        <div class="btn-box">
+          <button class="share btn">
+            <img src="/static/share.png" alt="" /> <a href="A">Share Link</a>
+          </button>
+        </div>
+        {% endcomment %}
+      </div>
+    </div>
+    {% endfor %}
+    <script src="{% static 'product_info.js' %}"></script>
+  </body>
+</html>

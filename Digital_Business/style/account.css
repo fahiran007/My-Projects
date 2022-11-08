@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#profile-items {
+  height: 9.5vh;
+  width: 95%;
+  background-color: rgb(22, 28, 110);
+  display: flex;
+  flex-direction: row;
+  border-radius: 01rem;
+  padding: 0.6rem;
+  margin: 1rem auto auto auto;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.items {
+  height: 4.5vh;
+  width: 95%;
+  background-color: rgb(22, 28, 110);
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.7rem;
+  padding: 0.6rem;
+  margin: 0.5rem auto auto auto;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.balance-box {
+  flex-direction: row;
+  border-radius: 0.7rem;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  margin: 1.5rem auto 1.5rem auto;
+  width: 75vw;
+  color: black;
+  /* position: absolute; */
+}
+
+.balance {
+  font-size: 0.9rem;
+}
+
+#balance {
+  color: rgb(73, 20, 20);
+  font-weight: bold;
+}
+
+
+
+.infos {
+  padding: 0 0.6rem;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+.infos #name {
+  color: rgb(36, 211, 27);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#full-list-items {
+  height: 100%;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.list-items-box {
+  height: 3.5vh;
+
+}
+
+.list-items {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+#userid {
+  margin-top: 0.2rem;
+  font-weight: bold;
+}
+
+.list-items .arrow {
+  height: 1rem;
+  position: absolute;
+  right: 3rem;
+}
+
+.items-picture {
+  height: 100%;
+  margin: 0 0.7rem 0 0;
+}
+
+.main-box-profile {
+  background-color: rgb(22, 28, 110);
+  height: 17vh;
+  border-radius: 1rem;
+}
+
+.parent-box-profile {
+  height: 20vh;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+
+#email {
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_pic {
+  width: 25%;
+  background-size: cover;
+
+}
+
+#profile-items #profile-picture {
+  height: 100%;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+}

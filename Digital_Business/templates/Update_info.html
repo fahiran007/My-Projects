@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Updatation</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Update_info.css' %}" />
+</head>
+<body>
+  <label id="idx" for="">{{idx}}</label>
+  <header onclick="go_back()">
+    <img src="/static/angle-right-free-icon-font.png" alt="" class="back-btn" />
+    <h4>Update Informations</h4>
+  </header>
+  <div class="verify-notification-box">
+    <div class="verify-notification">
+      <label for="" class="success">Success</label>
+      <label for="" class="otp-sent">OTP Sent</label>
+    </div>
+  </div>
+  <form action="/Update_info/{{idx}}" method="post">
+    {% csrf_token %}
+    <div class="input">
+      <label class="status" id="status" for="">{{status}}</label>
+      <label for="" class="first-input input-label">New Name :</label>
+      <input type="text" class="input-box" placeholder="Name" name="name" />
+    </div>
+    <div class="input">
+      <label for="" class="input-label">New Email :</label>
+      <input type="text" class="input-box" name='email' placeholder="Email" />
+    </div>
+    <div class="update-btn">
+      <button type="submit" class="update-btn">Verify</button>
+    </div>
+  </form>
+  <script src="{% static 'Update_info.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.transactions {
+  width: 93vw;
+  margin: 2rem auto 0 auto;
+}
+
+.transactions-box {
+  height: 8.5vh;
+  background-color: rgb(22, 28, 110);
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.mode-and-amount {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.withdrawal {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: 100%;
+  width: 50%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.amount {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.id-and-status {
+  width: 100%;
+  display: block;
+  height: 50%;
+}
+
+.id {
+  color: white;
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  color: white;
+  display: block;
+  height: 100%;
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.namount {
+  color: rgb(255, 0, 0);
+}
+
+.pamount {
+  color: rgb(16, 234, 16);
+}

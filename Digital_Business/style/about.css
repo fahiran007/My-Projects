@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  height: 50vh;
+  width: 92vw;
+  margin: 0 auto;
+  background-color: rgb(22, 28, 110);
+  border-radius: 0.7rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header-box {
+  font-size: 0.8rem;
+  width: 85%;
+  height: 2.8rem;
+  margin: 0 auto;
+  background-color: aqua;
+  border-radius: 1.3rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5rem;
+}
+
+.app-info img {
+  margin: 2rem auto 0 auto;
+  height: 50%;
+  width: 50%;
+  display: block;
+}
+
+.app-info {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.6rem;
+}
+
+.app-info h2 {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  text-decoration: underline;
+  text-decoration-color: aqua;
+}

@@ -1,0 +1,186 @@
+:root {
+    --main-bg-color: red;
+    --light-color: #efefef;
+    --primary-color: #02007e;
+    --body-color: #f9f9f9;
+    --text-color: #636363;
+    --text-color-dark: #242738;
+    --white-color: #ffffff;
+    --light-color: #f8f9fa;
+    --font-family: Lato;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.max-width-1 {
+    width: 80vw;
+}
+
+.max-width-2 {
+    width: 60vw;
+}
+
+.m-bottom {
+    margin-bottom: 12px;
+}
+
+.m-bottom-d {
+    margin-bottom: 24px;
+}
+
+.m-top {
+    margin-top: 12px;
+}
+
+.m-top-d {
+    margin-top: 24px;
+}
+
+.m-top-t {
+    margin-top: 40px;
+}
+
+.m-bottom-t {
+    margin-bottom: 40px;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.p-top {
+    padding-top: 12px;
+}
+
+.p-top-d {
+    padding-top: 24px;
+}
+
+.p-top-t {
+    padding-top: 40px;
+}
+
+.p-bottom {
+    padding-bottom: 12px;
+}
+
+.p-bottom-d {
+    padding-bottom: 24px;
+}
+
+.p-bottom-t {
+    padding-bottom: 40px;
+}
+
+.p-to-bo {
+    padding: 12px 0;
+}
+
+.p-to-bo-d {
+    padding: 24px 0;
+}
+
+.p-to-bo-t {
+    padding: 40px 0;
+}
+
+.p-ri-le {
+    padding: 0 12px;
+}
+
+.p-ri-le-d {
+    padding: 0 24px;
+}
+
+.p-ri-le-t {
+    padding: 0 40px;
+}
+
+.m-ri-le {
+    margin: 0 12px;
+}
+
+.m-ri-le-d {
+    margin: 0 24px;
+}
+
+.m-ri-le-t {
+    margin: 0 40px;
+}
+
+.m-to-bo {
+    margin: 12px 0;
+}
+
+.m-to-bo-d {
+    margin: 24px 0;
+}
+
+.m-to-bo-t {
+    margin: 40px 0;
+}
+
+
+.btn {
+    padding: 5px 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-input {
+    padding: 5px 5px;
+    border: 2px solid black;
+    font-size: 16px;
+    margin: 0 13px;
+    border-radius: 4px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
+.form-box input, textarea {
+    width: 44vw;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.dis-none {
+    display: none;
+}

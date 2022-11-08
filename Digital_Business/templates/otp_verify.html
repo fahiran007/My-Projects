@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verify</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'otp-verify.css' %}" />
+  </head>
+
+  <body>
+    <header onclick="go_back()">
+      <img src="/static/angle-right-free-icon-font.png" alt="" />
+      <label for="">OTP verify</label>
+    </header>
+    <div class="verify-notification-box">
+      <div class="verify-notification">
+        <label for="" class="success">Success</label>
+        <label for="" class="otp-sent">OTP Sent</label>
+      </div>
+    </div>
+    <form action="/otp_verify/{{UserId}}" method="post">
+      {% csrf_token %}
+      <div class="other-info">
+        <label for="">Enter Verification Code</label>
+        <label for="">We've sent to you on {{data}}</label>
+        <label for="" class="dis-none" id="otp_status">{{otp}}</label>
+        <input name="otp" placeholder="* * * *" />
+        <div class="resend">
+          <label for="" class="resend-otp">Resend OTP in 28 seconds</label>
+        </div>
+      </div>
+      <div id="verify-btn">
+        <button type="submit">Verify and continue</button>
+      </div>
+    </form>
+    <script src="{% static 'otp-verify.js' %}"></script>
+  </body>
+</html>

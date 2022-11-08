@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forgot Password</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'forgot_pass.css' %}" />
+</head>
+
+<body>
+  <label id="idx" style="display:none ;" for="">{{idx}}</label>
+  <header onclick="go_back()">
+    <img src="/static/angle-right-free-icon-font.png" alt="" class="back-btn" />
+    <h4>Forgot Password</h4>
+  </header>
+  <form action="/forgot_pass/{{idx}}" method="post">
+    {% csrf_token %}
+    <label class="dis-none" id="changed" for="">{{changed}}</label>
+    <div class="input">
+      <label for="" class="input-label">Old Password</label>
+      <input type="text" class="input-box" name="password" placeholder="Password" />
+    </div>
+    <label id="pas_stat" class="dis-none" for="">{{pas_stat}}</label>
+    <div class="input">
+      <label for="" class="input-label">New Password</label>
+      <input type="password" class="input-box" name="newpassword" placeholder="New Password" />
+    </div>
+    <div class="input">
+      <label for="" class="input-label">Re-Enter New Password</label>
+      <input type="text" class="input-box" name="renewpassword" placeholder="Re-Enter New Password" />
+    </div>
+    <label id="status" class="dis-none" for="">{{status}}</label>
+    <div class="update-btn">
+      <button type="submit" class="update-btn"><b>Forgot</b></button>
+    </div>
+  </form>
+  <script src="{% static 'forgot_pass.js' %}"></script>
+</body>
+
+</html>

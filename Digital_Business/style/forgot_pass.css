@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(9, 11, 46);
+}
+
+form {
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  box-sizing: border-box;
+}
+
+header {
+  height: 5.5vh;
+  color: white;
+  background-color: rgb(9, 11, 46);
+  display: flex;
+  align-items: center;
+  padding: 0 3%;
+  font-size: 1.2rem;
+}
+
+header img {
+  height: 45%;
+  transform: rotateY(180deg);
+  margin: 0 2% 0 0;
+}
+
+.input-label {
+  width: 100%;
+  padding: 2% 0;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.input {
+  padding: 3%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.update-btn {
+  width: 100%;
+  margin: 4%;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 0.55rem;
+  border: none;
+  background-color: rgb(238, 116, 9);
+  color: white;
+}
+
+.input-box {
+  padding: 2.7%;
+  border: none;
+  border-radius: 0.55rem;
+  outline: none;
+  border: none;
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  header img {
+    display: none;
+  }
+
+  header {
+    width: 14vw;
+    position: absolute;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  body {
+    border-radius: 1rem;
+    margin: 1.5rem 0 0 0;
+    border: white 1px solid;
+    width: 20vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    padding: 10px;
+    height: 80vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-label {
+    font-size: 1rem;
+  }
+}
+
+#status {
+  color: aqua;
+  margin: 0.4rem auto 0 auto;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.dis-none {
+  display: none;
+}
+
+#pas_stat {
+  color: aqua;
+  margin: 0.4rem auto 0 auto;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+#changed {
+  display: block;
+  color: rgb(1, 219, 1);
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.4rem auto 0 auto;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <style>
+        header img {
+            height: 44%;
+            margin: 0 0.3rem 0 0;
+            border: none;
+            transform: rotateY(180deg);
+        }
+
+        .create-h {
+            width: 30%;
+            height: 100%;
+        }
+
+        .login-h {
+            margin: 0 0 0 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <header onclick="change_page()">
+        <div  class="create-h display-flex-row display-none">
+            <img src="/static/angle-right-free-icon-font.png" alt="" id="back-btn">
+            <h2 for="update">Sign Up</h2>
+        </div>
+    </header onclick="go_back()">
+    <div class="welcome">
+        <h1>Hello👌</h1>
+        <label for="">Let's set you up!</label>
+        <label id="sts" for="">{{status}}</label>
+    </div>
+    <div class="create form display-none" id="create-page">
+        <form class="create-account" action="/Intersteller/None" method="post">
+            {% csrf_token %}
+            <div class="inputs">
+                <label class="input-labels" for="">Name</label>
+                <input required class="input" type="text" placeholder="Name" name="Name">
+            </div>
+            <div class="inputs">
+                <label class="input-labels" for="">Email</label>
+                <input required class="input" type="text" placeholder="Email" name="Email">
+            </div>
+            <div class="inputs">
+                <label class="input-labels" for="">Password</label>
+                <input required class="input" type="password" placeholder="Password" name="Password">
+            </div>
+            <label for="" id="len">{{short}}</label>
+            <div class="inputs">
+                <label class="input-labels" for="">Re-Enter Password</label>
+                <input required class="input" type='text' placeholder="Re-Enter Password" name="repass">
+            </div>
+            <div class="inputs">
+                <label class="input-labels" for="">Referral Code</label>
+                <input id="refer_codeI" required class="input" type='text' value="{{refer_code}}" placeholder="Referral Code" name="referBy">
+            </div>
+            <label for="" id="refer">{{refer}}</label>
+            <label for="" class="" id="pass_check">{{pass_status}}</label>
+            <div class="display-flex submit-btn">
+                <button type="submit" class="btn" id="signupBtn" name="signup-btn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <script src='{% static "signup.js" %}'></script>
+</body>
+
+</html>

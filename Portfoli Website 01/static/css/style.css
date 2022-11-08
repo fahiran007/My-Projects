@@ -1,0 +1,141 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-left: 14px;
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+header {
+    background-color: #02007e;
+    color: white;
+}
+
+header::after {
+    background-image: url('/static/media/banner.jpg');
+    width: 60px;
+    height: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+    padding: 12px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    padding-right: 150px;
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 52%;
+    /* background-color: red; */
+}
+
+.about-info {
+    color: rgb(213, 213, 213);
+}
+
+.search {
+    width: 80%;
+    height: 35px;
+    border-radius: 20px;
+    padding: 0 12px;
+    outline: none;
+    border: none;
+}
+
+.icon {
+    height: 40px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: white;
+    width: 330px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.content {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.conatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    /* background-color: red; */
+}
+
+.contact {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 84%;
+    border-radius: 5px;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact a {
+    height: 45px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 130px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    background-color: #02007e;
+}
+
+footer {
+    /* width: 90vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: purple;
+    margin-left: 3px;
+}

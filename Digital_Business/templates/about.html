@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <style>
+        header {
+            width: 100vw;
+            height: 6.5vh;
+            display: flex;
+            background-color: rgb(9, 11, 46);
+            ;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 44%;
+            margin: 0 0.7rem 0 0;
+            border: none;
+            transform: rotateY(180deg);
+        }
+
+        body {
+            margin: 0 auto;
+            color: white;
+            width: 100vw;
+            background: rgb(9, 11, 46);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        @media screen and (min-width: 1000px) {
+            header {
+                font-size: 1.6rem;
+                height: 6vh;
+                width: 96%;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+
+            header img {
+                display: none;
+            }
+
+            body {
+                border-radius: 1rem;
+                margin: 1.5rem 0 0 0;
+                border: white 1px solid;
+                width: 20vw;
+                height: 90vh;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            html {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <label style="display: none;" id="idx" for="">{{idx}}</label>
+    <header  onclick="go_back()">
+        <img src="/static/angle-right-free-icon-font.png" alt="">
+        <h2>About Us</h3>
+    </header>
+    <div class="box">
+        <div class="header-box">InterSeller-Get stable monthly earning with Zero investment</div>
+        <div class="app-info">
+            <img src="/static/—Pngtree—modern flat design concept of_5332875.png" alt="">
+            <h2>InterSeller</h2>
+            <label for="">Generate online income: Earning money online had never been so simple,
+                just refer products and once they complete the task you get rewarded.
+            </label>
+        </div>
+    </div>
+    <script src="{% static 'about.js' %}"></script>
+</body>
+
+</html>

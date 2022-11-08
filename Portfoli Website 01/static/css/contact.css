@@ -1,0 +1,25 @@
+.contact-box {
+    width: 75vw;
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+div input {
+    background-color: white;
+    outline: none;
+}
+
+.form-control {
+    height: 30px;
+}
+
+.contact-box h2 {
+    color: var(--primary-color);
+}
+.btn{
+    background-color: var(--primary-color);
+    color: white;
+    outline: none;
+}

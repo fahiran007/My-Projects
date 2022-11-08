@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- {% load static %} -->
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="/style/home.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 5.4vh;
+            background-color: rgb(30, 2, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <label for="">ControlPanel</label>
+    </header>
+    <div class="main">
+        <form action="/Home" method="post">
+            {% csrf_token %}
+            <input type="text" class="inputs" placeholder="Title" required name='title' />
+            <input type="text" class="inputs" placeholder="Subtitle" required name='subtitle' />
+            <input type="text" class="inputs" placeholder="Link" required name='Link' />
+            <input type="text" class="inputs" placeholder="Amount" required name='amount' />
+            <textarea name="desc" class="textareas" id="" cols="30" rows="10"
+                placeholder="Type our description"></textarea>
+            <input type="text" class="inputs" placeholder="When Got Money" required name='When' />
+            <input type="text" class="inputs" placeholder="Specification1" required name='spec1' />
+            <input type="text" class="inputs" placeholder="Specification2" required name='spec2' />
+            <input type="text" class="inputs" placeholder="Specification3" required name='spec3' />
+            <input type="text" class="inputs" placeholder="Specification4" required name='spec4' />
+            <input type="text" class="inputs" placeholder="Specification5" required name='spec5' />
+            <input type="text" class="inputs" placeholder="Specification6" required name='spec6' />
+            <input type="text" class="inputs" placeholder="Specification7" required name='spec7' />
+            <input type="text" class="inputs" placeholder="Specification8" required name='spec8' />
+            <input type="text" class="inputs" placeholder="Specification9" required name='spec9' />
+            <input type="text" class="inputs" placeholder="Specification10" required name='spec10' />
+
+            <div class="btns">
+                <button id="cancel" type="reset" onclick="change_location()">Cancel</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="/script/Home.js"></script>
+    <script src="{% static 'home.js' %}"></script>
+</body>
+
+</html>

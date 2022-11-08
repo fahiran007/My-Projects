@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <style>
+        header img {
+            height: 44%;
+            margin: 0 0.3rem 0 0;
+            border: none;
+            transform: rotateY(180deg);
+        }
+
+        .create-h {
+            width: 30%;
+            height: 100%;
+        }
+
+        .login-h {
+            margin: 0 0 0 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="login-h">
+            <h2>InterSeller</h2>
+        </div>
+    </header>
+    <div class="welcome">
+        <h1>Hello👌</h1>
+        <label for="">Let's set you up!</label>
+    </div>
+    <div class="login form" id="login-page">
+        <form class="login-form" action="/userlogin" method="post">
+            {% csrf_token %}
+            <label id='login_check' style="color: aqua;" for="">{{login}}</label>
+            <div class="inputs">
+                <label class="input-labels" for="">Email</label>
+                <input required class="input" type="text" placeholder="Email" name="email">
+            </div>
+            <div class="inputs">
+                <label class="input-labels" for="">Password</label>
+                <input required class="input" type="password" placeholder="password" name="password">
+            </div>
+            <div class="display-flex submit-btn">
+                <button type="submit" class="btn" name="login-btn">Log In</button>
+            </div>
+            <div class="go-to-create-page display-flex-row ">
+                <label for="">New to InterSeller?<a href="/Intersteller/None" style="color: rgb(3, 255, 3);text-decoration:none;">Create an Account</a></label>
+            </div>
+        </form>
+    </div>
+    
+<script src='{% static "login.js" %}'></script>
+</body>
+
+</html>

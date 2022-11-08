@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transactions</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'transaction.css' %}" />
+  <style>
+    header {
+      height: 5.5vh;
+      color: white;
+      background-color: rgb(9, 11, 46);
+      display: flex;
+      align-items: center;
+      padding: 0 1%;
+      font-size: 1.2rem;
+    }
+
+    header img {
+      height: 44%;
+      margin: 0 0.7rem 0 0;
+      border: none;
+      transform: rotateY(180deg);
+    }
+
+    body {
+      margin: 0 auto;
+      color: white;
+      width: 100vw;
+      background: rgb(9, 11, 46);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+      header {
+        font-size: 1.6rem;
+        height: 6vh;
+        width: 96%;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+
+      header img {
+        display: none;
+      }
+
+      body {
+        border-radius: 1rem;
+        margin: 1.5rem 0 0 0;
+        border: white 1px solid;
+        width: 20vw;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      html {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header onclick="go_back()">
+    <label id="idx" style="display:none ;" for="">{{idx}}</label>
+    <img src="/static/angle-right-free-icon-font.png" alt="" />
+    <h4>Transactions</h4>
+  </header>
+  <div class="transactions" style="color: black">
+    {% for data in datas %}
+    <div class="transactions-box" style="color: black">
+      <div class="mode-and-amount">
+        <label class="withdrawal with_type" for=" type">{{data.types}}</label>
+        <label for="" class="amnt amount">{{data.amount}}</label>
+      </div>
+      <div class="id-and-status">
+        <label for="" class="id">TransID:{{data.transID}}</label>
+        <label for="" class="status">Status: <label class="stat" for="">{{data.status}}</label></label>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <script src="{% static 'transaction.js' %}"></script>
+</body>
+
+</html>

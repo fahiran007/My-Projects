@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'account.css' %}" />
+  <style>
+    header {
+      height: 5.5vh;
+      color: white;
+      background-color: rgb(9, 11, 46);
+      display: flex;
+      align-items: center;
+      padding: 0 1%;
+      font-size: 1.2rem;
+    }
+
+    header img {
+      height: 44%;
+      margin: 0 0.7rem 0 0;
+      border: none;
+      transform: rotateY(180deg);
+    }
+
+    body {
+      margin: 0 auto;
+      color: white;
+      width: 100vw;
+      background: rgb(9, 11, 46);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+      header {
+        font-size: 1.6rem;
+        height: 6vh;
+        width: 96%;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+
+      header img {
+        display: none;
+      }
+
+      body {
+        border-radius: 1rem;
+        margin: 1.5rem 0 0 0;
+        border: white 1px solid;
+        width: 20vw;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      html {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<header onclick="go_back()">
+  <img src="/static/angle-right-free-icon-font.png" alt="" />
+  <h4>Account</h4>
+</header>
+
+<body>
+  {% for datas in data %}
+  <label style="display: none" for="" id="idx">{{idx}}</label>
+  <div id="full-list-items">
+    <div class="parent-box-profile">
+      <div class="main-box-profile">
+        <div class="items" id="profile-items">
+          <div class="profile_pic">
+            <img id="profile-picture" src="/static/369-user.png" alt="Profile-picture" />
+          </div>
+          <div class="infos">
+            <label for="" id="name"><b>{{datas.Names}}</b></label>
+            <label style="font-size: 0.7rem" for="" id="email">Email:{{datas.Emails}}</label>
+            <label style="font-size: 0.7rem" for="" id="userid">UserID:{{datas.UserId}}</label>
+          </div>
+        </div>
+        <div class="balance-box">
+          <div>
+            <label for="balance-name" class="balance balance-name">Account Balance ₹</label>
+            <label for="balance" class="balance" id="balance">{{datas.Moneys}}.0rs</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %}
+    <div class="items edit-profile list-items-box">
+      <a class="links" href="/Update_info/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/367-user.png" alt="" />
+          <label for="">Edit profile</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    {% endcomment %}
+    <div class="items list-items-box">
+      <a class="links" href="/withdrawal/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/money-withdrawal.png" alt="" />
+          <label for="">Withdrawal</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <div class="items list-items-box">
+      <a class="links" href="/Transactions/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/salary.png" alt="" />
+          <label for="">Transactions</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <div class="items list-items-box">
+      <a class="links" href="/Share/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/money-bag.png" alt="" />
+          <label for="">Refer And Earns</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <div class="items list-items-box">
+      <a class="links" href="/forgot_pass/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/forgot-password.png" alt="" />
+          <label for="">Forget Password</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <div class="items list-items-box">
+      <a class="links" href="/help/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/support.png" alt="" />
+          <label for="">Help and Supports</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <div class="items list-items-box">
+      <a class="links" href="/about/{{idx}}">
+        <div class="list-items">
+          <img class="items-picture" src="/static/info.png" alt="" />
+          <label for="">About Us</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+    <div class="items list-items-box">
+      <a class="links" href="/LogoutUser">
+        <div class="list-items">
+          <img class="items-picture" src="/static/logout.png" alt="" />
+          <label for="">Logout</label>
+          <img class="arrow" src="/static/angle-right-free-icon-font.png" alt="" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="withdrawal-page"></div>
+  {% endfor %}
+  <script src="{% static 'account.js' %}"></script>
+</body>
+
+</html>

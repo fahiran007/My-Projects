@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Withdrawal</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'withdrawal.css' %}" />
+  <style>
+    header {
+      height: 5.5vh;
+      color: white;
+      background-color: rgb(9, 11, 46);
+      display: flex;
+      align-items: center;
+      padding: 0 1%;
+      font-size: 1.2rem;
+    }
+
+    header img {
+      height: 44%;
+      margin: 0 0.7rem 0 0;
+      border: none;
+      transform: rotateY(180deg);
+    }
+
+    body {
+      margin: 0 auto;
+      color: white;
+      width: 100vw;
+      background: rgb(9, 11, 46);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+      header {
+        font-size: 1.6rem;
+        height: 6vh;
+        width: 96%;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+
+      header img {
+        display: none;
+      }
+
+      body {
+        border-radius: 1rem;
+        margin: 1.5rem 0 0 0;
+        border: white 1px solid;
+        width: 20vw;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      html {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <label id="idx" style="display: none;" for="">{{idx}}</label>
+  <header onclick="change_page()">
+    <img src="/static/angle-right-free-icon-font.png" alt="" />
+    <h4>Withdrawal Money</h4>
+  </header>
+  <div class="withdrawal-box">
+    <div class="balance-box">
+      <div class="second-box">
+        <label for="balance-name" class="balance balance-name">Account Balance </label>
+        <label for="balance" class="balance" id="balance">₹{{money}}.0rs</label>
+      </div>
+    </div>
+    <form action="/withdrawal/{{idx}}" method="post">
+      {% csrf_token %}
+      <label id="status" for="">{{status}}</label>
+      <div class="input">
+        <label class="info-label" for="">Amount</label>
+        <input type="text" placeholder="Amount" required name='amount' />
+        <label class="dis-none" id="amountvalid" for="">{{amountvalid}}</label>
+        <label class="dis-none" id="nomoney" for="">{{nomoney}}</label>
+        <label id="amnt_ch" for="">{{am}}</label>
+        <label class="info-label" for="">UPI id</label>
+        <input type="text" required placeholder="example@upi" name='upi_id' />
+        <button type="submit" class="btn">Withdrawal</button>
+      </div>
+    </form>
+    <div class="note">
+      <h4>Note:</h4>
+      <label for="">1:-Amount Transfer Limit is min. Rs.500 and Max. Rs.10000</label>
+      <label for="">2:-All Process request amount will transfer in your bank/wallet
+        within 1-2 working</label>
+    </div>
+    {% for data2 in datas2 %}
+    <div class="transactions-box" style="color: black">
+      <div class="mode-and-amount">
+        <label class="with_type withdrawal" for=" type">{{data2.types}}</label>
+        <label for="" class="amnt amount">{{data2.amount}}</label>
+      </div>
+      <div class="id-and-status">
+        <label for="" class="id">TransID:{{data2.transID}}</label>
+        <label for="" class=" status">Status: <label class="stat" for="">{{data2.status}}</label></label>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <script src="{% static 'withdrawal.js' %}"></script>
+</body>
+
+</html>

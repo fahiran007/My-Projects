@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <style>
+      header {
+        height: 5.5vh;
+        color: white;
+        background-color: rgb(9, 11, 46);
+        display: flex;
+        align-items: center;
+        padding: 0 3%;
+        font-size: 1.5rem;
+      }
+
+      header #profile-picture {
+        position: absolute;
+        right: 1rem;
+        height: 2.1rem;
+      }
+
+      header label {
+        font-weight: bold;
+      }
+
+      body {
+        margin: 0 auto;
+        color: white;
+        width: 100vw;
+        background: rgb(9, 11, 46);
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      @media screen and (min-width: 1000px) {
+        header {
+          font-size: 1.6rem;
+          height: 6vh;
+          width: 96%;
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+
+        header img {
+          display: none;
+        }
+
+        body {
+          border-radius: 1rem;
+          margin: 1.5rem 0 0 0;
+          border: white 1px solid;
+          width: 20vw;
+          height: 90vh;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        html {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <label id="idx" for="" style="display: none">{{idx}}</label>
+      <label for="">IntersTeller</label>
+      <img id="profile-picture" class="icons" src="/static/369-user.png" alt="" />
+    </header>
+    <div class="all-products">
+      {% for product in data %}
+      <div class="product">
+        <div class="account account-1 displat-flex-row">
+          <div class="account-logo display-flex">
+            <img src="/{{product.product_img}}" alt="Logo" />
+          </div>
+          <div class="account-label">
+            <label class="text-big" for="">{{product.title}}</label>
+            <label
+              style="justify-content: left"
+              for=""
+              class="display-flex text-small"
+              >{{product.subtitle}}</label
+            >
+            <button class="rupees">Rs.{{product.earn_money}}</button>
+          </div>
+          <div class="account-button">
+            <a
+              style="text-decoration: none"
+              class="view-details"
+              href="/products/{{product.idx}}/{{idx}}"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

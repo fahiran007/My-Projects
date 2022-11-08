@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.all-products {
+  height: 100vh;
+  width: 94vw;
+  margin: 4% auto;
+}
+
+.icons {
+  border-radius: 50%;
+}
+
+.account {
+  margin-top: 1rem;
+  border-radius: 0.7rem;
+  height: 8.5vh;
+  width: 100%;
+  padding: 2%;
+  background-color: rgb(18, 22, 95);
+  box-sizing: border-box;
+}
+
+.displat-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-name {
+  width: 100%;
+  height: 4%;
+  background: none;
+  margin: 2% 0;
+  font-size: 1.5rem;
+}
+
+.account-logo {
+  width: auto;
+  height: 90%;
+  margin: auto 0;
+}
+
+.account-logo img {
+  height: 100%;
+  width: 86%;
+  display: block;
+  background-size: cover;
+}
+
+.account-label {
+  height: 90%;
+  width: 70%;
+  margin: auto 0;
+}
+
+.account-button {
+  height: 90%;
+  margin: auto 0;
+  width: 20%;
+}
+
+.account-button .view-details {
+  font-size: 0.6rem;
+  width: 4.6rem;
+  border: none;
+  background-color: aqua;
+  border-radius: 1em;
+  padding: 5%;
+  margin: 45% 10% 0 0;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-big {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: 0.7rem;
+}
+
+.rupees {
+  font-size: 0.5rem;
+  font-weight: bold;
+  border: none;
+  background-color: rgb(13, 218, 88);
+  color: black;
+  border-radius: 1rem;
+  padding: 1.6%;
+  box-sizing: border-box;
+}

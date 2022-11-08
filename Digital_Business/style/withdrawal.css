@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.withdrawal-box {
+  height: 50vh;
+  width: 94vw;
+  margin: 1rem auto 0 auto;
+  background-color: rgb(9, 11, 46);
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+h3 {
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  height: 5vh;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 0 0 0 0.5rem;
+  outline: none;
+  border: none;
+}
+
+.info-label {
+  display: block;
+  margin: 1rem auto 0.5rem auto;
+  width: 90%;
+}
+
+.btn {
+  display: block;
+  border: none;
+  border-radius: 0.6rem;
+  height: 4.9vh;
+  width: 40%;
+  color: white;
+  background-color: orangered;
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+
+#balance {
+  color: black;
+  font-weight: bold;
+}
+
+.balance {
+  font-size: 0.9rem;
+}
+
+.balance-box {
+  flex-direction: row;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 1.5rem auto 1.5rem auto;
+  width: 85vw;
+  color: black;
+  /* position: absolute; */
+}
+
+.second-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+}
+
+.note label {
+  display: block;
+  font-size: 0.6rem;
+}
+
+.dis-none {
+  display: none;
+}
+
+.transactions-box {
+  height: 8.5vh;
+  background-color: rgb(22, 28, 110);
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  color: white;
+  margin-bottom: 0.6rem;
+}
+
+.mode-and-amount {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.withdrawal {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  height: 100%;
+  width: 50%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.amount {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.id-and-status {
+  width: 100%;
+  display: block;
+  height: 50%;
+}
+
+.id {
+  color: white;
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  color: white;
+  display: block;
+  height: 100%;
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.note {
+  margin-bottom: 1rem;
+}
+
+#status {
+  display: none;
+}

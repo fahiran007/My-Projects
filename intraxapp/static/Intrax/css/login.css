@@ -1,0 +1,130 @@
+  .input {
+      padding-left: 0.5rem;
+      height: 50px;
+      width: 100%;
+      color: black;
+      outline: none;
+      background-color: whitesmoke;
+      border-radius: 0.3rem;
+      margin: 0.4rem 0 0.4rem 0;
+      border: none;
+  }
+
+  .inputs {
+      width: 97vw;
+      padding: 0.4rem;
+      margin: auto;
+      border-radius: 0.4rem;
+  }
+
+  * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+  }
+
+  header {
+      padding-left: 0.4rem;
+      width: 100vw;
+      height: 5.8vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      }
+
+  body {
+      background-color: rgb(6, 6, 36);
+  }
+
+  .btns {
+      margin-top: 1rem;
+      width: 100%;
+      height: 50px;
+  }
+
+  .btn {
+      width: 48%;
+      height: 100%;
+      color: white;
+      float: left;
+      border: none;
+      border-radius: 0.4rem;
+      font-size: 1.2rem;
+  }
+
+  .loginbtn {
+      margin-right: 2%;
+      border: white 2px solid;
+      color: white;
+      background: none;
+  }
+
+  .signupbtn {
+      background-color: rgb(254, 98, 8);
+      margin-left: 2%;
+  }
+
+  .dis-none {
+      display: none;
+  }
+
+  .welcome {
+      width: 94%;
+      margin: 5% auto 0 auto;
+      display: block;
+      color: white;
+  }
+
+  .verify {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+  }
+
+  .otp-sent {
+      background-color: green;
+      width: 60%;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      border-bottom-left-radius: 0.4rem;
+      border-top-left-radius: 0.4rem;
+      margin-bottom: 0.4rem;
+  }
+
+  .otp-sent label {
+      margin-left: 0.5rem;
+      color: white;
+  }
+
+  .main-box {
+      width: 100vw;
+      display: flex;
+      justify-content: right;
+  }
+
+  .error-box {
+      font-weight: bold;
+      background-color: rgb(187, 8, 8);
+      color: whitesmoke;
+      margin: 0.4rem auto auto auto;
+      width: 94%;
+      padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+      border-radius: 0.1rem;
+  }
+
+  .otp-text {
+      font-size: 1.2rem;
+      color: white;
+
+  }
+
+  .o1 {
+      color: #08c5ff;
+  }
+
+  .o2 {
+      color: #09f1fd;
+      margin-top: 0.3rem;
+      display: block;
+  }

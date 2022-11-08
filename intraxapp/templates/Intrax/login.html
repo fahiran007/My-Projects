@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/Intrax/css/login.css">
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>IntraX</h2>
+  </header>
+  <div class="welcome">
+    <h1>Hello👌</h1>
+    <label for="">Let's set you up!</label>
+  </div>
+  <div class="error-box" id="error-box">
+    <label class="error" id="error">{{error}}</label>
+  </div>
+  <div class="inputs">
+    <form class=" {% if request.path != '/Intrax/Create-Account' %} dis-none {% endif %}form1" action="Intrax/Create-Account"
+      method="post">
+      {% csrf_token %}
+      <input type="text" class="input" value="{{data.name}}" placeholder="Name" name="Name" />
+      <input type="text" class="input" value="{{data.phone}}" placeholder="Phone" name="Phone" />
+      <input type="text" class="input" value="{{data.email}}" placeholder="Email" name="Email" />
+      <input type="Password" class="input" value="{{data.pass}}" placeholder="Password" name="Password" />
+      <input type="text" class="input" value="{{data.re_pass}}" placeholder="Re-Password" name="Re_pass" />
+      <div class="btns">
+        <button onclick="go_page(0)" type="reset" class="btn loginbtn">
+          Login
+        </button>
+        <button type="submit" class="btn signupbtn">Create</button>
+      </div>
+    </form>
+    <form class="form2 {% if request.path != '/Intrax/Login' %} dis-none {% endif %}" action="/Intrax/Login" method="get">
+      <input type="text" class="input" value="{{data1.phone}}" name="Phone" required placeholder="Phone" />
+      <input type="Password" value="{{data1.pass}}" name="Password" class="input" required placeholder="Password" />
+      <div class="btns">
+        <button onclick="go_page(1)" type="reset" class="btn loginbtn">
+          Create
+        </button>
+        <button type="submit" class="btn signupbtn">Login</button>
+      </div>
+    </form>
+    <form class="{% if request.path != '/Intrax/OTP-Verification' %} dis-none {% endif %} form3 {{request.path}}"
+      action="Intrax/OTP-Verification" method="get">
+      <div class="main-box">
+        <div class="otp-sent">
+          <label for="">OTP Sent Successfully</label>
+        </div>
+      </div>
+      <label for="" class="otp-text o1">Enter Phone OTP :</label>
+      <input type="text" class="verify input" value="{{ph_otp}}" name="ph-otp" required placeholder="######" />
+      <label for="" class="otp-text o2">Enter Email OTP :</label>
+      <input type="text" class="verify input" value="{{em_otp}}" name="em-otp" required placeholder="######" />
+      <div class="btns">
+        <button onclick="go_page(2)" type="reset" class="btn loginbtn">
+          Cancel
+        </button>
+        <button type="submit" class="btn signupbtn">Verify</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    let errors = document.getElementById("error")
+    let error_box = document.getElementsByClassName('error-box')[0]
+    eror()
+    function eror() {
+      if (errors.innerHTML == '') {
+        error_box.style.display = 'none'
+      }
+    }
+    function go_page(index) {
+      if (index == 0) {
+        location.href = "/Intrax/Login"
+      }
+      if (index == 1) {
+        location.href = "/Intrax/Create-Account"
+      }
+      if (index == 2) {
+        location.href = "/Intrax/Create-Account"
+      }
+    }
+  </script>
+</body>
+
+</html>
